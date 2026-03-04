@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script>
+        // Khoi tao
+        class User {
+            // Thuộc tính
+            constructor(fullname, age, gender) {
+                this.fullname = fullname;
+                this.age = age;
+                this.gender = gender;
+            }
+            // Phương thức
+            show() {
+                return `xin chao ${this.fullname}`;
+            }
+            render() {
+                const rootEle = document.getElementById('root');
+                rootEle.innerHTML = this.fullname + this.age + this.gender;
+            }
+        }
+
+        // tao class moi va ke thua mot so thuoc tinh cua class user
+        class Student extends User{
+            constructor(fullname,uni,school){
+                super(fullname);
+                this.uni = uni;
+                this.school = school;
+            }
+            introduce(){
+                return `xin chao toi la ${this.fullname} la hoc sinh nam ${this.uni} cua truong ${this.school}`;
+            }
+        }
+
+        let my_info = new User('Luu Duc Vy', 27, 'male');
+        let my_school = new Student('luuducvy',4,'ktkt ki thuat');
+
+        console.log(my_school.introduce());
+        
+
+    </script>
+</body>
+
+</html>

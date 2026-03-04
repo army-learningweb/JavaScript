@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class User {
+            constructor(fullname,age,gender){
+                this.fullname = fullname;
+                this.age = age;
+                this.gender = gender
+            }
+            set setFullname(fullname){
+                return this.fullname = fullname;
+            }
+
+            get getFullname(){
+                return this.fullname;
+            }
+        }
+
+        let user_info = new User ('luuducvy',27,'male');
+        user_info.setFullname = 'ducvy';
+        console.log(user_info);
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="user" data-id="1" data-username="luuvy158" data-age="27"></div>
+
+
+    <script>
+        const userEle = document.querySelector('#user');
+
+        userEle.dataset.username = 'luuvy159' // thay doi hoac cap nhat gia tri moi
+        delete userEle.dataset.age; // xoa data-age
+        console.log(userEle);
+
+
+    </script>
+</body>
+</html>

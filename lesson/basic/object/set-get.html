@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        let person_info = {
+            firstname: 'Lưu Đức',
+            lastname: 'Vỹ',
+            get fullname() {
+                return this.firstname + " " + this.lastname;
+            },
+            set fullname(info) {
+                info = info.split(' ');
+                this.firstname = info[0];
+                this.lastname = info[info.length-1];
+            }
+        }
+
+        person_info.fullname = "Lưu Đức Vỹ";
+        
+        console.log(person_info.fullname);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

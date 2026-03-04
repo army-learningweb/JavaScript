@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        ul#list-prod{
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+            width: 450px;
+        }
+        ul#list-prod li.prod-item{
+            width: auto;
+            padding: 5px;
+            border: 1px solid gainsboro;
+            margin-right: 5px;
+        }
+        .prod-img{
+            width: 200px;
+        }
+
+        .prod-img img{
+            width: 100%;
+            height: auto;
+        }
+
+        a.prod-link{
+            text-decoration: none;
+            color: black;
+        }
+    </style>
+    <ul id="list-prod">
+        
+    </ul>
+
+    <script>
+
+        const ulEle = document.getElementById('list-prod');
+        let list_prod = [
+            {
+                img : 'images/iphone_17pro__0s6piftg70ym_large_2x.jpg',
+                name : 'iPhone 17',
+                price : '39.999.000 vnđ'
+            },
+            {
+                img : 'images/iphone_air__f0t56fef3oey_large_2x.jpg',
+                name : 'iPhone 17',
+                price : '39.999.000 vnđ'
+            }
+        ]
+        
+        let list_product = list_prod.map((element) => {
+            return`
+            <li class="prod-item">
+            <a href="#" class="prod-link">
+                <div class="prod-img"><img src="${element.img}" alt=""></div>
+                <div class="prod-name">${element.name}</div>
+                <div class="prod-price">${element.price}</div>
+            </a>
+            </li>
+            `;
+        })
+
+        ulEle.innerHTML = list_product.join(' ');
+    </script>
+</body>
+</html>

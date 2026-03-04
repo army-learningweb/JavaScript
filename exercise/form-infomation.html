@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        input {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        select {
+            margin-bottom: 5px;
+        }
+    </style>
+    <form action="#">
+        <input type="text" name="" id="fullname" placeholder="fullname">
+        <input type="text" name="" id="username" placeholder="username">
+        <input type="password" name="" id="password" placeholder="password">
+        <select name="" id="city">
+            <option value="0"> -- City -- </option>
+            <option value="1"> -- Ho Chi Minh -- </option>
+            <option value="2"> -- Vung Tau -- </option>
+            <option value="3"> -- Da Lat -- </option>
+        </select>
+        <input type="submit" value="Regiester" id="btn-register">
+    </form>
+    <div id="result">
+
+    </div>
+
+    <script>
+        const resultEle = document.querySelector('#result');
+        const btnEle = document.querySelector('#btn-register');
+        btnEle.addEventListener('click', function () {
+            const fullName = document.querySelector('#fullname');
+            const userName = document.querySelector('#username');
+            const passWord = document.querySelector('#password');
+            const cityEle = document.querySelector('#city').value;
+
+            function city (cityEle){
+                cityName = [
+                    'Chua chon Tp',
+                    'Ho chi Minh',
+                    'Vung Tau',
+                    'Da Lat'
+                ];
+                return cityName[cityEle];
+            };
+            // function city(cityEle) {
+            //     if (cityEle == 1) {
+            //         return 'Ho Chi Minh';
+            //     } else if (cityEle == 2) {
+            //         return 'Vung Tau';
+            //     } else if (cityEle == 3) {
+            //         return 'Da Lat';
+            //     } else {
+            //         return 'Chua chon';
+            //     }
+            // };
+
+            resultEle.innerHTML = 
+            `
+            <p> Ho ten : ${fullname.value} </p>
+            <p> Tai khoan : ${username.value} </p>
+            <p> Mat khau : ${password.value} </p>
+            <p> Thanh pho : ${city(cityEle)}</p>
+
+            `
+            // e.preventDefault();
+
+        })
+
+    </script>
+</body>
+
+</html>

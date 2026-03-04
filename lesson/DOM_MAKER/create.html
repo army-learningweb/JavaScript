@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const bodyEle = document.body;
+        const wrapperEle = document.createElement('div');
+        const headerEle = document.createElement('div');
+        const contentEle = document.createElement('div');
+        const footerEle = document.createElement('div');
+        wrapperEle.id = 'wrapper';
+        headerEle.id = 'header';
+        contentEle.id = 'content';
+        footerEle.id = 'footer';
+
+        headerEle.style.padding = '20px';
+        headerEle.style.background = 'gainsboro';
+        headerEle.innerText = 'header';
+        headerEle.style.textAlign = 'center';
+
+        contentEle.style.height = '600px';
+        contentEle.style.background = 'gray';
+        contentEle.innerText = 'content';
+        contentEle.style.textAlign = 'center';
+
+        footerEle.style.padding = '20px';
+        footerEle.style.background = 'gainsboro';
+        footerEle.innerText = 'footer';
+        footerEle.style.textAlign = 'center';
+
+        bodyEle.append(wrapperEle);
+        wrapperEle.append(headerEle,contentEle,footerEle);
+        console.log(wrapperEle);
+       
+    </script>
+</body>
+</html>
