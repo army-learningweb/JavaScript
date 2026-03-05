@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <a href="" id="link"></a>
+    
+    <script>
+        // Xuất dữ liệu dạng hộp thoại thông báo
+        alert('xin chào');
+
+        // Xuất dữ liệu lên html
+        let name = 'vy';
+        document.write(name);
+
+        // Xuất dữ liệu trong console log trình duyệt
+        console.log(name);
+
+        // Xuất dữ liệu lên thẻ html (inner HTML)
+        let aElement = document.getElementById('link');
+        aElement.innerHTML = name
+
+    </script>
+
+    
+</body>
+</html>
