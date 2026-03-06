@@ -8,11 +8,13 @@
 </head>
 
 <body>
-    <h1>Cập nhật lại giá trị từng phần tử trong mảng</h1>
+    
     <script>
 
+        // Cập nhật lại giá trị từng phần tử trong mảng sô học
+
         let numbers = [1, 2, 3, 4, 5];
-        let new_numbers = numbers.map(function (value) {
+        let new_numbers = numbers.map(function (value,index,arr) {
             return value * 2
         });
         console.log(new_numbers);

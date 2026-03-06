@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Mọi thứ bên trong hàm đều là block scope - chỉ ảnh hưởng bên trong;
+
+        // Hàm không có tham số
+        function hello(){
+            console.log('hello');
+        }
+
+        // Hàm có tham số
+        function sum(a,b){
+            return console.log(a+b); // Trả về giá trị ngay với lệnh return
+        }
+
+        // Gọi hàm
+        hello()
+
+        sum(1,2)
+    </script>
+</body>
+</html>

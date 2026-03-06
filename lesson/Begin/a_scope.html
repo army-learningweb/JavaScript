@@ -10,14 +10,27 @@
     <script>
         // Tầm vực của biến
         
-        const a = 10;
-
+        // Biến VAR bị ảnh hưởng trong lẫn ngoài (hạn chế dùng)
+        // Var có thể khai báo lại biến trên cùng cấp
+        var a = 10;
         {
-            const a = 20;
-           
+            var a = 20;
         }
 
-       console.log(a);
+        // Block scope biến ở bên trong { }
+        // Biến không bị ảnh hưởng bởi blockscope - tách biệt hoàn toàn bên trong và bên ngoài
+        // Biến let không thể khai báo lạib
+        let b = 10;
+        {
+            let b = 20;
+        }
+
+        // Block scope
+        // Hằng số Const
+        // Đại diện cho một hằng số không thay đổi suốt chương trình
+        // Có thể cập nhật lại thuộc tính nếu giá trị của hằng số là một object
+
+       console.log(b);
         
     </script>
 </body>

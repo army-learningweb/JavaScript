@@ -9,28 +9,54 @@
 
 <body>
     <script>
-        
-        // Phép toán trong js
-        let a = 2;
-        let b = 3;
 
+        // Phép toán trên chuỗi (nối chuỗi)
+        
+        let a = 'dev'
+        let b = 'website'
+        let c = a + b;
+        let d = 2
+        let e = c + d;
+        
+        a+=b;
+        console.log(a);
+
+        // Phép toán trong js
         let plus_total = a + b;
         let minus_total = a - b;
         let multi_total = a * b;
         let division_total = a / b;
+        let exponan_total = a ** b; // Mũ
+        let modulo_total = a % b; // Chia lấy dư
 
-        // Mũ
-        let exponan_total = a ** b;
+        // Phép tăng & phếp giảm 1 đơn vị
+        a++;
+        a--;
 
-        // Chia lấy dư
-        let modulo_total = a % b;
+        // Phép gán
+        x += y; // x = x + y;
+        x -= y; // x = x - y;
+        x *= y; // x = x * y;
+        x /= y; // x = x / y;
+        x **= y; // x = x ** y;
+        x %= y; // x = x % y;
 
-        console.log(plus_total);
-        console.log(minus_total);
-        console.log(multi_total);
-        console.log(division_total);
-        console.log(exponan_total);
-        console.log(modulo_total);
+        // So sánh
+        a > b; // lớn hơn 
+        a < b; // bé hơn
+        a >= b; // lớn hơn hoặc bằng
+        a >= b; // bé hơn hoặc bằng
+        a != b; // khác
+        a == b; // bằng
+        a === b; // bằng giá trị và cùng kiểu
+
+        // Logic
+        a && b; // và (cả 2 cùng đúng)
+        a || b; // hoặc (một trong 2)
+        !a; // nếu khác a hoặc a không có giá trị
+
+        
+
 
 
     </script>
