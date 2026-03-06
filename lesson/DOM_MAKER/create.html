@@ -8,15 +8,20 @@
 <body>
     <script>
         const bodyEle = document.body;
+
+        // Khởi tạo
         const wrapperEle = document.createElement('div');
         const headerEle = document.createElement('div');
         const contentEle = document.createElement('div');
         const footerEle = document.createElement('div');
+
+        // Thêm id
         wrapperEle.id = 'wrapper';
         headerEle.id = 'header';
         contentEle.id = 'content';
         footerEle.id = 'footer';
 
+        // Style
         headerEle.style.padding = '20px';
         headerEle.style.background = 'gainsboro';
         headerEle.innerText = 'header';
@@ -32,8 +37,12 @@
         footerEle.innerText = 'footer';
         footerEle.style.textAlign = 'center';
 
+        // Nhúng wrapper vào body
         bodyEle.append(wrapperEle);
+
+        // Nhúng header,content,footer vào wrapper
         wrapperEle.append(headerEle,contentEle,footerEle);
+
         console.log(wrapperEle);
        
     </script>

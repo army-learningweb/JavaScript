@@ -6,12 +6,12 @@
     <title>Document</title>
 </head>
 <body>
+    <!-- Bắt sự thay đổi kích thước của window -->
     <script>
-        Sayhi = (name) =>{
-            return `xin chao ${name}`;
-        };
-
-        console.log(Sayhi('vy')); 
+        window.addEventListener('resize',function(){
+            console.log(window.innerWidth);
+            console.log(window.innerHeight);
+        })
     </script>
 </body>
 </html>

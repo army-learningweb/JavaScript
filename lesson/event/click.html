@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- cách 1 -->
+    <!-- inline -->
+    <a href="" id="btn" onclick="alert('aaaa')">Click me !</a>
+
+    <!-- cách 2 -->
+    <!-- js addEventListener -->
+    <a href="" id="js">Click me JS!</a>
+    
+    <script>
+        const aElement = document.querySelector('#js');
+        aElement.addEventListener('click', function () {
+            console.log('aaaa');
+        })
+    </script>
+
+</body>
+
+</html>

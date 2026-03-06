@@ -1,28 +1,52 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="todolist.css">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body>
-    <div id="wrapper">
-        <div class="box">
-            <form action="" id="form-task">
-                <input type="text" name="enter-task" id="enter-task" placeholder="enter your task">
-                <input type="submit" id="btn-add-task" value="add task">
-            </form>
-            <div id="list-task">
-                <ul>
-                    
-                </ul>
+<body class="bg-[#121212]">
+    <div class="min-h-screen md:w-[990px] mx-auto flex flex-col justify-center items-center">
+        <div class="text-4xl font-bold text-green-700 my-5">MY TODOLIST</div>
+        <div class="bg-[#242424] text-white rounded-md w-[50%] p-4 shadow-lg mb-50">
+
+            <!-- add task -->
+            <div class="flex justify-between gap-5">
+                <div class="border-b border-gray-200 flex-1">
+                    <input type="text" placeholder="add your new task !" class="input-task px-3 py-1 pl-0 w-full inline-block focus:border-none focus:outline-none">
+                </div>
+                <div data-index="" class="add-task text-xs flex items-center justify-between text-center font-semibold bg-green-800 w-[90px] px-5 py-1 rounded-md shadow-md text-center hover:brightness-110 cursor-pointer active:brightness-130 select-none">
+                    Add Task
+                </div>
             </div>
-            <div id="all-complete-task">Yeah, 1 task complete</div>
+
+            <!-- show task -->
+            <div class="task-list mt-3">
+
+                <!-- task item -->
+                <!-- <div class="py-4 flex justify-between items-center">
+                        <div class="hover:text-green-700 cursor-pointer">
+                            Học javascript
+                        </div>
+                        <div class="flex gap-4">
+                            <i class="fa-solid fa-eraser hover:text-green-700 cursor-pointer"></i>
+                            <i class="fa-solid fa-xmark hover:text-green-700 cursor-pointer"></i>
+                        </div>
+                    </div> -->
+            </div>
+
+            <!-- error -->
+            <div class="alert-box italic text-red-800 text-xs"></div>
+
+            <!-- count -->
+            <!-- <div class="count-task-complete text-xs text-gray-500 mt-2">Đã hoàn thành (0)</div> -->
         </div>
+
     </div>
+
     <script src="app.js"></script>
 </body>
 

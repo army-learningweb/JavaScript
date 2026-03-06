@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="name" id="name">
+
+    <script>
+        // Khi gõ phím và khi thả phím
+
+        const inputElement = document.querySelector('#name');
+        inputElement.addEventListener('keydown',function(e){
+            console.log(e.which); // Lấy mã số trên bàn phím
+        })
+
+        inputElement.addEventListener('keyup',function(){
+            console.log(this.value);
+        })
+    </script>
+</body>
+</html>

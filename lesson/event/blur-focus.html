@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div style="margin-top: 10px">
+        <label for="name">name</label>
+        <input type="text" name="name" id="name">
+    </div>
+    
+    <script>
+        // Khi nhấp vào
+        const inputElement = document.querySelector('input');
+        inputElement.addEventListener('focus',function(){
+            console.log(this.value);
+        });
+
+        // Khi chọn ra
+        inputElement.addEventListener('blur',function(){
+            console.log(this.value);
+        })
+    </script>
+</body>
+</html>

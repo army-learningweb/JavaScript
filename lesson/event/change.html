@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="name" id="name">
+
+    <script>
+        // Change -> khi có sự thay đổi giá trị trong input
+        const inputElement = document.querySelector('#name');
+        inputElement.addEventListener('change',function(){
+            console.log(this.value);
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" id="register">
+        <fieldset>
+            <legend>submit event</legend>
+            <input type="text" id="name">
+            <button type="submit" id="submit">Submit</button>
+        </fieldset>
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+
+        // Sự kiện khi submit form
+        const result = document.querySelector('#result');
+        const inputElement = document.querySelector('#name');
+        const form = document.forms.register; // lấy form
+        form.addEventListener('submit',function(e){
+
+            let name = inputElement.value;
+            e.preventDefault();
+            result.innerHTML = name;
+        })
+    </script>
+</body>
+</html>
