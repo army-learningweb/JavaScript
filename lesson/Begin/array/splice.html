@@ -13,7 +13,9 @@
         // Xóa hoặc thêm phần tử với splice
 
         let list_colors = ['red','blue','green'];
-
+        list_colors.forEach((element,index,arr) => {
+            console.log(arr);
+        });
 
         // 1 tham số -> xóa
         // 2 tham số -> xóa từ 2, 0 -> tức không xóa phần tử nào
@@ -21,7 +23,7 @@
 
         list_colors.splice(2,0,'black');
 
-        console.log(list_colors);
+        // console.log(list_colors);
 
 
     </script>

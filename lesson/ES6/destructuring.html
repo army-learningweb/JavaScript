@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // Nhận giá trị của object
+        let person = {
+            name : 'vy',
+            age : 27
+        };
+
+        let {name,age} = person;
+
+        // Nhận giá trị của mảng
+        let array = [1,2,3];
+        let [a,b,c,d] = array;
+        
+        //... rest
+        let numbers = [1,2,3,4,5];
+        let [e,f,...moreNums] = numbers;
+        console.log(moreNums);
+
+        // Bỏ qua phần tử
+        let numbers_2 = [1,2,3];
+        let [g, ,v] = numbers_2
+
+        // Nhận giá trị từ Hàm
+        let my_func = (a,c) => {
+            return [a,b]
+        }
+
+        let [m,n] = my_func(1,2)
+        console.log(n);
+    </script>
+</body>
+</html>

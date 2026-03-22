@@ -8,16 +8,16 @@
 <body>
     <script>
         
-        let array1 = [1,2,3];
+        // spread operator for array
+        let array = [1,2,3]
+        let new_array = [...array,4,5,6] // Tạo mảng mới và kế thừa mảng cũ + thêm pt mới
+        let new_array_2 = [...array,...new_array]; // Kết hợp mảng
+        console.log(new_array_2);
 
-        let array2 = [...array1,4,5,6];
-
-        let array3 = [...array1,...array2];
-        
-        console.log(array3);
-
-
-
+        // spread operator for string
+        let string = 'luuducvy'
+        let array_string = [...string];
+        console.log(array_string);
 
     </script>
 </body>

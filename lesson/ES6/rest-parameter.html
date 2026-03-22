@@ -10,17 +10,13 @@
 <body>
     <script>
 
-        // Xử lý tham số nâng cao truyền ngẫu nhiên không cố định
+        // Nhận tham số hàm không cố định
 
-        function sum(...number_random) {
-            let total = 0;
-            for (number of number_random) {
-               total += number;
-            }
-            return total;
+        let sum = (...numbers) => {
+            console.log(numbers);
         }
 
-       console.log(sum(1,2,3,4,5));
+        sum(1,2,3,4,5)
     </script>
 </body>
 
